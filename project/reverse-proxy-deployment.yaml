@@ -18,13 +18,13 @@ spec:
       - image: ose4g/reverseproxy:v1
         name: reverseproxy
         imagePullPolicy: Always          
-        resources:
-          # requests:
-          #   memory: "1024Mi"
-          #   cpu: "250m"
-          # limits:
-          #   memory: "2048Mi"
-          #   cpu: "500m"       
+        # resources:
+        #   requests:
+        #     memory: "1024Mi"
+        #     cpu: "250m"
+        #   limits:
+        #     memory: "2048Mi"
+        #     cpu: "500m"       
         ports:
         - containerPort: 8081
       restartPolicy: Always

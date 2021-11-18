@@ -5,7 +5,7 @@ metadata:
     app: udagram-api-feed
   name: udagram-api-feed
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: udagram-api-feed
@@ -21,8 +21,10 @@ spec:
           # resources:
           #   requests:
           #     memory: "1024Mi"
+          #     cpu: "250m"
           #   limits:
           #     memory: "2046Mi"
+          #     cpu: "500m"
           env:
             - name: URL
               valueFrom:

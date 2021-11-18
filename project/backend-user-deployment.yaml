@@ -5,7 +5,7 @@ metadata:
     app: udagram-api-user
   name: udagram-api-user
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: udagram-api-user
@@ -18,11 +18,13 @@ spec:
         - image: ose4g/udagram-api-user:v1
           name: udagram-api-user
           imagePullPolicy: Always
-          resources:
-            # requests:
-            #   memory: "1024Mi"
-            # limits:
-            #   memory: "2046Mi"
+          # resources:
+          #   requests:
+          #     memory: "1024Mi"
+          #     cpu: "250m"
+          #   limits:
+          #     memory: "2046Mi"
+          #     cpu: "500m"
           env:
             - name: URL
               valueFrom:
