@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+kubectl apply -f aws-secret.yaml 
+kubectl apply -f env-configmap.yaml 
+kubectl apply -f env-secret.yaml
+kubectl apply -f deployment.yaml 
+kubectl apply -f service.yaml 
+kubectl apply -f backend-feed-deployment.yaml 
+kubectl apply -f backend-feed-service.yaml
+kubectl apply -f backend-user-deployment.yaml
+kubectl apply -f backend-user-service.yaml 
+kubectl apply -f reverse-proxy-deployment.yaml 
+kubectl apply -f reverse-proxy-service.yaml 
