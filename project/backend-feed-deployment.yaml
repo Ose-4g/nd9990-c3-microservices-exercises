@@ -18,11 +18,11 @@ spec:
         - image: ose4g/udagram-api-feed:v1
           name: udagram-api-feed
           imagePullPolicy: Always
-          resources:
-            requests:
-              memory: "1024Mi"
-            limits:
-              memory: "2046Mi"
+          # resources:
+          #   requests:
+          #     memory: "1024Mi"
+          #   limits:
+          #     memory: "2046Mi"
           env:
             - name: URL
               valueFrom:
@@ -49,11 +49,11 @@ spec:
                 configMapKeyRef:
                   name: env-config
                   key: JWT_SECRET
-            - name: POSTGRES_DATABASE
+            - name: POSTGRES_DB
               valueFrom:
                 configMapKeyRef:
                   name: env-config
-                  key: POSTGRES_DATABASE
+                  key: POSTGRES_DB
             - name: POSTGRES_HOST
               valueFrom:
                 configMapKeyRef:
